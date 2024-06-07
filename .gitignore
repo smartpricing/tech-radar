@@ -4,3 +4,9 @@ node_modules/
 
 # yarn
 yarn-error.log
+
+build.sh
+
+helm
+
+upgrade.sh

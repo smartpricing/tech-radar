@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: {{ .Release.Name }}
+  name: {{ .Release.Name }}
+  namespace: {{ .Release.Namespace }}
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      run: {{ .Release.Name }}
+  template:    
+    metadata:
+      labels:
+        run: {{ .Release.Name }}
+        np.ingress.external: "true"
+      namespace: {{ .Release.Namespace }}
+    spec:     
+      containers:
+        - name: nginx
+          imagePullPolicy: Always
+          image: {{ .Values.image }}:{{ .Values.imageTag }}
+          ports:
+            - containerPort: 80
+          resources: {{- toYaml .Values.resources | trim | nindent 12 }}                
+      imagePullSecrets:
+        - name: gcr-json-key

@@ -280,7 +280,7 @@ function radar_visualization(config) {
       .attr("transform", translate(title_offset.x, title_offset.y))
       .text(config.title)
       .style("font-family", "Arial, Helvetica")
-      .style("font-size", "30")
+      .style("font-size", "26")
       .style("font-weight", "bold")
 
     // date

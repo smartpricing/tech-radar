@@ -1,9 +1,8 @@
 # Motivation
 
-At [Zalando](http://zalando.de), we maintain a [public Tech
+At [Smartpricing](https://www.smartpricing.it/it), we maintain a [public Tech
 Radar](http://zalando.github.io/tech-radar/) to help our engineering teams
-align on technology choices. It is based on the [pioneering work
-by ThoughtWorks](https://www.thoughtworks.com/radar).
+align on technology choices, forked from [Zalando](https://github.com/smartpricing/tech-radar).
 
 This repository contains the code to generate the visualization:
 [`radar.js`](/docs/radar.js) (based on [d3.js v4](https://d3js.org)).
